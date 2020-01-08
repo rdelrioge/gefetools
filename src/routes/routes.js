@@ -1,5 +1,8 @@
 import Dashboard from "../components/Dashboard/Dashboard";
-import Historial from "../components/Historial/Historial";
+import Mr from "../components/Mr/Mr";
+import Ct from "../components/Ct/Ct";
+import Shimming from "../components/Shimming/Shimming";
+import MagnetMonitor from "../components/MagnetMonitor/MagnetMonitor";
 
 const routes = [
   {
@@ -7,8 +10,20 @@ const routes = [
     component: Dashboard
   },
   {
-    path: "/historial",
-    component: Historial
+    path: "/mr",
+    component: Mr
+  },
+  {
+    path: "/ct",
+    component: Ct
+  },
+  {
+    path: "/mr/shimming",
+    component: Shimming
+  },
+  {
+    path: "/mr/magnetmonitor",
+    component: MagnetMonitor
   }
 ];
 

@@ -1,0 +1,24 @@
+@import "../../index.scss";
+
+.shimming {
+  width: 100vw;
+  .upperbar {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    .return {
+      text-decoration: none;
+      color: $primary;
+      margin: auto 0;
+      padding-left: 1em;
+    }
+    .title {
+      background-color: white;
+      text-align: center;
+      color: $secondary;
+      padding: 1em;
+      font-weight: bold;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
+  }
+}

@@ -1,45 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import BottomNavigation from "@material-ui/core/BottomNavigation";
-import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-
 import LayoutRouter from "./LayoutRouter";
 /* Styles */
 import "./Layout.scss";
 
 function Layout() {
-  const [value, setValue] = React.useState("dashboard");
-
-  function handleChange(event, newValue) {
-    setValue(newValue);
-  }
-
   return (
     <div className="layout">
+      <div className="titlebar">
+        <Link className="brand-logo" to="/">
+          <div>
+            <h3>GE FE Tools</h3>
+          </div>
+        </Link>
+      </div>
       <div className="main">
         <LayoutRouter />
       </div>
-      <BottomNavigation
-        value={value}
-        onChange={handleChange}
-        className="navbar"
-      >
-        <BottomNavigationAction
-          component={Link}
-          to="/historial"
-          label="Historial"
-          value="historial"
-          icon={<i className="material-icons">event</i>}
-        />
-        <BottomNavigationAction
-          component={Link}
-          to="/"
-          label="Dashboard"
-          value="dashboard"
-          icon={<i className="material-icons">dashboard</i>}
-        />
-      </BottomNavigation>
     </div>
   );
 }

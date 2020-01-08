@@ -1,0 +1,23 @@
+@import "../../index.scss";
+
+.dashboard {
+  display: grid;
+  width: 100vw;
+  div {
+    margin: auto;
+    display: contents;
+    a {
+      text-decoration: none;
+      color: white;
+      margin: auto;
+      padding: 1em 8em;
+      border: 1px solid $primary;
+      border-radius: 10px;
+      background-color: $primary;
+    }
+    a:hover {
+      background-color: $secondary;
+      color: white;
+    }
+  }
+}

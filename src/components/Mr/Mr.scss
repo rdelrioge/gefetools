@@ -1,0 +1,45 @@
+@import "../../index.scss";
+
+.mr {
+  display: grid;
+  grid-template-rows: 40px 1fr 1fr;
+  width: 100vw;
+  .upperbar {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    .return {
+      text-decoration: none;
+      color: $primary;
+      margin: auto 0;
+      padding-left: 1em;
+    }
+    .title {
+      background-color: white;
+      text-align: center;
+      color: $secondary;
+      padding: 1em;
+      font-weight: bold;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
+  }
+  .tools {
+    margin: auto;
+    display: contents;
+    a {
+      text-decoration: none;
+      color: white;
+      margin: auto;
+      padding: 1em;
+      border: 1px solid $primary;
+      border-radius: 10px;
+      background-color: $primary;
+      width: 60%;
+      text-align: center;
+    }
+    a:hover {
+      background-color: $secondary;
+      color: white;
+    }
+  }
+}

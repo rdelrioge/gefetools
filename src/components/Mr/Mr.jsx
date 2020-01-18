@@ -16,9 +16,9 @@ function Mr() {
         <Link to="/mr/shimming">
           <h2>Passive shimming printing tool</h2>
         </Link>
-        <Link to="/mr/magnetmonitor">
+        {/* <Link to="/mr/magnetmonitor">
           <h2>Magnet Monitor error detector</h2>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

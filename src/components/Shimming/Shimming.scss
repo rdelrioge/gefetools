@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 .shimming {
-  width: 100vw;
+  width: 100%;
   .upperbar {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
@@ -20,5 +20,136 @@
       border-bottom-left-radius: 60px;
       border-bottom-right-radius: 60px;
     }
+  }
+  .container {
+    height: calc(100vh - 107px);
+    display: flex;
+    flex-direction: column;
+    .input {
+      margin: auto;
+      .inputFile {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+      }
+
+      .file-input__label,
+      .printBtn,
+      .okbtn {
+        margin: 1em;
+        min-width: 150px;
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        color: $primary;
+        font-size: 14px;
+        padding: 10px 12px;
+        border: 2px dotted $primary;
+      }
+
+      .file-input__label:hover,
+      .printBtn:hover {
+        background-color: rgba(87, 172, 241, 0.25);
+      }
+      .printBtn,
+      .okbtn {
+        min-width: 178px;
+        background: none;
+      }
+    }
+
+    .printarea {
+      margin: 0 1em;
+      .textContainer {
+        display: flex;
+        .textArea {
+          margin: 2em auto;
+          padding: 2em;
+          border: 1px solid white;
+          background-color: white;
+          border-radius: 8px;
+          width: fit-content;
+          pre {
+            font-family: monospace;
+            margin: 5px 0 0 0;
+          }
+        }
+      }
+      .section {
+        margin-bottom: 2em;
+      }
+      .barnumbers {
+        display: grid;
+        grid-template-columns: 1fr repeat(12, 2fr) 1fr;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.4em;
+        background-color: $primary;
+        span {
+          border: 1px solid lightgray;
+        }
+      }
+      .data {
+        ul {
+          display: grid;
+          margin: 0;
+          padding: 0;
+          border-bottom: 1px solid lightgray;
+          grid-template-columns: repeat(26, 1fr);
+          li {
+            list-style: none;
+            text-align: center;
+          }
+          .number {
+            background-color: $primary;
+          }
+          .even {
+            background-color: white;
+          }
+          .odd {
+            background-color: whitesmoke;
+            border-right: 1px solid lightgray;
+          }
+        }
+      }
+    }
+  }
+}
+.red {
+  color: red;
+  font-weight: bold;
+}
+.green {
+  color: #2ebb24;
+  font-weight: bold;
+}
+
+@media print {
+  .textContainer {
+    display: block !important;
+    transform: rotate(90deg);
+    .textArea {
+      margin: 0 !important;
+    }
+  }
+  .section {
+    zoom: 80% !important;
+  }
+  .s0112 {
+    margin: -23em 0 12em 0 !important;
+  }
+  .s1324 {
+    margin-bottom: 12em !important;
+  }
+  .upperbar,
+  .input {
+    display: none !important;
   }
 }

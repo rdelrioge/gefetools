@@ -10,9 +10,9 @@ function Dashboard() {
         <Link to="/mr">
           <h2>MR</h2>
         </Link>
-        <Link to="/ct">
+        {/* <Link to="/ct">
           <h2>CT</h2>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

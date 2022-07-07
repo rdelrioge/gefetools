@@ -13,6 +13,7 @@ function Layout() {
             <h3>GE FE Tools</h3>
           </div>
         </Link>
+        <span>Version: 1.1.0</span>
       </div>
       <div className="main">
         <LayoutRouter />

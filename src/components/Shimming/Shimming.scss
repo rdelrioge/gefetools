@@ -67,6 +67,9 @@
 
     .printarea {
       margin: 0 1em;
+      .info{
+        text-align: center;
+      }
       .textContainer {
         display: flex;
         .textArea {
@@ -130,26 +133,31 @@
   color: #2ebb24;
   font-weight: bold;
 }
+.noModificar{
+  background-color: dimgray;
+}
 
 @media print {
-  .textContainer {
-    display: block !important;
-    transform: rotate(90deg);
-    .textArea {
-      margin: 0 !important;
-    }
-  }
+  // .textContainer {
+  //   display: block !important;
+  //   transform: rotate(90deg);
+  //   .textArea {
+  //     margin: 0 !important;
+  //   }
+  // }
   .section {
-    zoom: 80% !important;
+    zoom: 76% !important;
   }
+  .pagebreak { page-break-before: always; }
   .s0112 {
-    margin: -23em 0 12em 0 !important;
+    // margin: -23em 0 12em 0 !important;
+    margin: 0 0 12em 0 !important;
   }
   .s1324 {
     margin-bottom: 12em !important;
   }
   .upperbar,
-  .input {
+  .input, .info, .textContainer {
     display: none !important;
   }
 }
